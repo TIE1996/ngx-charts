@@ -337,9 +337,8 @@ export class LineChartComponent extends BaseChartComponent {
     const domain = [];
     for (const results of this.results) {
       for (const d of results.series) {
-        if (domain.indexOf(d.value) < 0) {
           domain.push(d.value);
-        }
+        
         if (d.min !== undefined) {
           this.hasRange = true;
           if (domain.indexOf(d.min) < 0) {
